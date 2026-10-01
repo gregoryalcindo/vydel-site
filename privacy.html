@@ -80,6 +80,61 @@
       </ul>
       <p>L'utilisateur peut également supprimer toutes les données locales de VYDEL en effaçant les données de l'application ou en désinstallant l'application. Les fichiers présents sur Google Drive restent sous le contrôle du compte Google de l'utilisateur et peuvent être supprimés depuis Google Drive.</p>
 
+      <h2>6A. Résumé du traitement des données Google</h2>
+      <div class="table-wrap">
+        <table class="privacy-table">
+          <thead>
+            <tr>
+              <th>Donnée</th>
+              <th>Finalité</th>
+              <th>Conservation par VYDEL</th>
+              <th>Partage / transfert</th>
+              <th>Suppression</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Email, nom, identifiant et photo de profil Google</td>
+              <td>Identifier le compte Google connecté et associer les opérations Drive au bon compte</td>
+              <td>Stockés localement dans l'espace privé de l'application tant que le compte reste connecté</td>
+              <td>Utilisés avec les services Google nécessaires ; non vendus et non transmis à des tiers pour leurs propres usages</td>
+              <td>Effacés de l'état local VYDEL lors de la déconnexion, de l'effacement des données de l'application ou de sa désinstallation</td>
+            </tr>
+            <tr>
+              <td>Jeton d'accès OAuth</td>
+              <td>Autoriser les appels Google Drive, Gmail et services d'identité demandés par l'utilisateur</td>
+              <td>Temporaire ; VYDEL ne le stocke pas de manière persistante dans ses préférences</td>
+              <td>Utilisé uniquement avec les services Google concernés</td>
+              <td>Expiration côté Google ; lors d'une déconnexion VYDEL tente également d'effacer le jeton en cache et de révoquer l'accès OAuth</td>
+            </tr>
+            <tr>
+              <td>Vidéos et dossiers VYDEL sur Google Drive</td>
+              <td>Stocker et livrer les vidéos générées par l'utilisateur et créer les liens de partage correspondants</td>
+              <td>Non stockés sur un serveur VYDEL ; ils résident dans le Google Drive de l'utilisateur</td>
+              <td>Hébergés par Google ; un lien n'est transmis à un destinataire que lorsque l'utilisateur choisit de le partager</td>
+              <td>Supprimables depuis les fonctions VYDEL prévues à cet effet ou directement depuis Google Drive</td>
+            </tr>
+            <tr>
+              <td>Adresse email d'un destinataire</td>
+              <td>Envoyer la livraison demandée et gérer l'historique de livraison de l'événement</td>
+              <td>Peut être conservée localement avec l'historique de l'événement</td>
+              <td>Transmise à Gmail pour l'envoi demandé et visible par le destinataire concerné</td>
+              <td>Supprimée avec l'historique correspondant ou lors de l'effacement des données de l'application</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>6B. Comment supprimer ou révoquer les données Google utilisées par VYDEL</h2>
+      <p>L'utilisateur garde le contrôle sur les données et autorisations Google associées à VYDEL. Il peut notamment :</p>
+      <ol>
+        <li><strong>Déconnecter Google dans VYDEL</strong> depuis l'écran Compte Google. VYDEL efface alors les informations locales du compte et tente de révoquer l'autorisation OAuth Google associée.</li>
+        <li><strong>Supprimer les rendus et fichiers VYDEL</strong> depuis l'écran Stockage lorsque les fonctions de suppression correspondantes sont disponibles pour l'événement. Les fichiers peuvent aussi être supprimés directement depuis Google Drive.</li>
+        <li><strong>Révoquer l'accès VYDEL depuis le compte Google</strong> en utilisant les paramètres de sécurité et de connexions tierces du compte Google.</li>
+        <li><strong>Supprimer les données locales de l'application</strong> depuis les réglages Android en effaçant les données de VYDEL, ou en désinstallant l'application. Cela supprime les informations locales VYDEL mais ne supprime pas automatiquement les fichiers déjà présents dans Google Drive.</li>
+      </ol>
+      <p>Après une déconnexion locale, VYDEL n'utilise plus Drive ou Gmail tant que l'utilisateur ne reconnecte pas volontairement un compte Google.</p>
+
       <h2>7. Gmail</h2>
       <p>Lorsque l'utilisateur choisit explicitement d'envoyer un lien client par email, VYDEL utilise l'autorisation Gmail accordée pour envoyer ce message depuis le compte Google sélectionné.</p>
       <p>VYDEL n'utilise pas Gmail pour lire, analyser ou télécharger les messages de l'utilisateur.</p>
@@ -166,6 +221,61 @@
         <li><strong>Google Drive files</strong>: VYDEL videos and folders stored in Google Drive remain in the user's Google account until they are deleted by the user, through VYDEL when a deletion feature is used, or directly in Google Drive.</li>
       </ul>
       <p>The user can also remove all locally stored VYDEL data by clearing the app's data or uninstalling the application. Files stored in Google Drive remain under the user's Google account and can be deleted from Google Drive.</p>
+
+      <h2>6A. Google data handling summary</h2>
+      <div class="table-wrap">
+        <table class="privacy-table">
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Purpose</th>
+              <th>Retention by VYDEL</th>
+              <th>Sharing / transfer</th>
+              <th>Deletion</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Google email address, name, account ID and profile picture</td>
+              <td>Identify the connected Google account and associate Drive operations with the correct account</td>
+              <td>Stored locally in the app's private storage while the account remains connected</td>
+              <td>Used with the Google services required for the requested features; not sold or transferred to third parties for their own purposes</td>
+              <td>Removed from VYDEL's local account state when the user disconnects Google, clears app data or uninstalls the app</td>
+            </tr>
+            <tr>
+              <td>OAuth access token</td>
+              <td>Authorize user-requested Google Drive, Gmail and identity operations</td>
+              <td>Temporary; VYDEL does not persistently store the access token in its preferences</td>
+              <td>Used only with the relevant Google services</td>
+              <td>Expires under Google's token lifecycle; when disconnecting, VYDEL also attempts to clear the cached token and revoke the OAuth grant</td>
+            </tr>
+            <tr>
+              <td>VYDEL videos and folders in Google Drive</td>
+              <td>Store and deliver videos rendered by the user and create the related sharing links</td>
+              <td>Not stored on a VYDEL server; these files reside in the user's Google Drive</td>
+              <td>Hosted by Google; a sharing link is disclosed to a recipient only when the user chooses to share it</td>
+              <td>Can be deleted using the applicable VYDEL deletion features or directly from Google Drive</td>
+            </tr>
+            <tr>
+              <td>Recipient email address</td>
+              <td>Send the requested delivery and manage the event delivery history</td>
+              <td>May be retained locally with the event history</td>
+              <td>Provided to Gmail for the user-requested send operation and visible to the intended recipient</td>
+              <td>Deleted with the corresponding history or when the app's local data is cleared</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>6B. How to delete or revoke Google data used by VYDEL</h2>
+      <p>The user remains in control of the Google data and permissions associated with VYDEL. The user can:</p>
+      <ol>
+        <li><strong>Disconnect Google inside VYDEL</strong> from the Google Account screen. VYDEL then clears its locally stored account information and attempts to revoke the associated Google OAuth authorization.</li>
+        <li><strong>Delete VYDEL renders and Drive files</strong> from the Storage screen when the relevant deletion options are available for the event. Files can also be deleted directly from Google Drive.</li>
+        <li><strong>Revoke VYDEL access from the Google Account</strong> using Google's security and third-party connection settings.</li>
+        <li><strong>Delete local app data</strong> from Android settings by clearing VYDEL's app data, or by uninstalling VYDEL. This removes VYDEL's local data but does not automatically delete files already stored in Google Drive.</li>
+      </ol>
+      <p>After local disconnection, VYDEL no longer uses Drive or Gmail unless the user voluntarily connects a Google account again.</p>
 
       <h2>7. Gmail</h2>
       <p>When the user explicitly chooses to email a client link, VYDEL uses the granted Gmail permission to send that message from the selected Google account.</p>
