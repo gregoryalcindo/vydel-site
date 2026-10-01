@@ -20,75 +20,175 @@
     <section class="legal-head">
       <div class="eyebrow">VYDEL</div>
       <h1>Politique de confidentialité</h1>
-      <p>Dernière mise à jour : 28 septembre 2026</p>
+      <p>Dernière mise à jour : 2 octobre 2026</p>
     </section>
 
     <section class="legal-card">
-      <p>VYDEL est une application Android destinée à aider les vidéastes à préparer, monter et livrer des vidéos événementielles.</p>
+      <p>VYDEL est une application Android destinée à aider les vidéastes à préparer, monter, générer et livrer des vidéos événementielles. Le montage et le rendu sont réalisés localement sur l'appareil Android. La connexion à Google est facultative et sert uniquement aux fonctions de livraison décrites ci-dessous.</p>
 
-      <h2>Traitement local des vidéos</h2>
-      <p>Les vidéos importées dans VYDEL sont traitées localement sur l'appareil Android pour les opérations de montage et de génération.</p>
+      <h2>1. Traitement local des vidéos</h2>
+      <p>Les vidéos importées dans VYDEL sont traitées localement sur l'appareil Android pour les opérations de montage, de recadrage, de ralenti et de génération.</p>
+      <p>VYDEL n'envoie pas les rushs originaux vers un serveur VYDEL. Une vidéo générée n'est envoyée vers Google Drive que lorsque l'utilisateur a connecté Google et utilise la fonction de synchronisation/livraison correspondante.</p>
 
-      <h2>Google Drive</h2>
-      <p>La connexion Google est facultative. Lorsque l'utilisateur active Google Drive, VYDEL utilise l'autorisation accordée pour envoyer les vidéos générées vers le Google Drive de l'utilisateur et créer un lien de partage pour ces fichiers.</p>
-      <p>VYDEL ne demande ni ne stocke le mot de passe Google de l'utilisateur. L'authentification et les jetons d'accès sont gérés par les composants d'autorisation Google présents sur l'appareil.</p>
+      <h2>2. Données utilisateur Google auxquelles VYDEL accède</h2>
+      <p>Lorsque l'utilisateur choisit de connecter son compte Google, VYDEL demande uniquement les autorisations nécessaires aux fonctions Google proposées par l'application.</p>
+      <ul>
+        <li><strong>Identité du compte (openid, email, profile)</strong> : VYDEL peut récupérer l'adresse email, le nom d'affichage, la photo de profil et l'identifiant unique du compte Google afin d'identifier le compte connecté dans l'application et d'associer correctement les fichiers Drive à ce compte.</li>
+        <li><strong>Google Drive (drive.file)</strong> : VYDEL utilise cette autorisation pour créer, envoyer, gérer et, à la demande de l'utilisateur, supprimer les fichiers et dossiers Drive créés ou utilisés par VYDEL pour la livraison des vidéos.</li>
+        <li><strong>Gmail (gmail.send)</strong> : VYDEL utilise cette autorisation uniquement lorsque l'utilisateur demande explicitement l'envoi d'un email de livraison ou d'avertissement depuis son propre compte Google.</li>
+      </ul>
+      <p>VYDEL n'utilise pas Gmail pour lire la boîte de réception, les messages, les pièces jointes ou les contacts de l'utilisateur. VYDEL ne demande pas un accès général aux fichiers Drive qui ne sont pas nécessaires aux fonctions décrites ci-dessus.</p>
 
-      <h2>Gmail</h2>
-      <p>Lorsque l'utilisateur choisit explicitement d'envoyer un lien client par email, VYDEL peut utiliser l'autorisation Gmail accordée pour envoyer ce message depuis le compte Google sélectionné.</p>
-      <p>L'adresse email utilisée pour une livraison réussie peut être mémorisée localement dans l'historique de l'événement afin de permettre, à la demande de l'utilisateur, l'envoi ultérieur d'un avertissement avant suppression des fichiers Drive. Aucun avertissement ni aucune suppression n'est déclenché automatiquement.</p>
-      <p>VYDEL n'utilise pas Gmail pour lire les messages de l'utilisateur.</p>
+      <h2>3. Utilisation des données utilisateur Google</h2>
+      <p>Les données obtenues via Google APIs sont utilisées exclusivement pour fournir les fonctionnalités visibles et demandées par l'utilisateur dans VYDEL :</p>
+      <ul>
+        <li>afficher et mémoriser localement quel compte Google est connecté ;</li>
+        <li>envoyer les vidéos générées par VYDEL vers le Google Drive de l'utilisateur ;</li>
+        <li>créer et gérer les liens de partage associés aux fichiers VYDEL ;</li>
+        <li>envoyer, uniquement sur action de l'utilisateur, des emails contenant les liens de livraison ou des avertissements liés à ses vidéos ;</li>
+        <li>gérer ou supprimer les fichiers Drive créés par VYDEL lorsque l'utilisateur demande cette action.</li>
+      </ul>
+      <p>VYDEL n'utilise pas les données utilisateur Google pour de la publicité, du profilage publicitaire, du marketing tiers, du courtage de données, ni pour entraîner, développer ou améliorer un modèle d'IA ou de machine learning généralisé.</p>
 
-      <h2>Données personnelles</h2>
-      <p>VYDEL ne vend pas les données personnelles de ses utilisateurs.</p>
-      <p>La version actuelle de VYDEL n'intègre pas de publicité ni de SDK publicitaire.</p>
+      <h2>4. Partage, transfert et divulgation des données utilisateur Google</h2>
+      <p>VYDEL ne vend pas, ne loue pas et ne cède pas les données utilisateur Google à des tiers.</p>
+      <p>VYDEL ne partage pas les données utilisateur Google avec des régies publicitaires, des courtiers en données, des réseaux sociaux ou des partenaires marketing pour leurs propres usages.</p>
+      <p>Les données peuvent être transmises uniquement dans les cas nécessaires au fonctionnement demandé par l'utilisateur :</p>
+      <ul>
+        <li><strong>Google</strong> : les appels à Google Drive, Gmail et OpenID Connect transitent par les services Google afin d'exécuter les actions autorisées par l'utilisateur.</li>
+        <li><strong>Destinataire choisi par l'utilisateur</strong> : lorsqu'un utilisateur demande l'envoi d'un email, le destinataire choisi reçoit le contenu du message et le lien de partage que l'utilisateur a décidé d'envoyer.</li>
+      </ul>
+      <p>VYDEL ne transfère pas les données utilisateur Google à des tiers pour un usage indépendant de celui demandé par l'utilisateur.</p>
 
-      <h2>Stockage</h2>
-      <p>Les préférences de session, les références de fichiers, les états de livraison et les adresses email utilisées pour les livraisons peuvent être stockés localement sur l'appareil afin d'assurer le fonctionnement et la gestion des événements.</p>
+      <h2>5. Protection des données et mesures de sécurité</h2>
+      <p>VYDEL applique les mesures suivantes pour limiter l'exposition des données sensibles :</p>
+      <ul>
+        <li>VYDEL ne demande jamais et ne stocke jamais le mot de passe Google de l'utilisateur ;</li>
+        <li>les jetons d'accès OAuth Google sont utilisés pour exécuter les actions autorisées et ne sont pas enregistrés de manière persistante dans les préférences VYDEL ;</li>
+        <li>les communications avec les services Google utilisent des connexions HTTPS/TLS ;</li>
+        <li>les informations de compte et de session nécessaires au fonctionnement sont enregistrées localement dans l'espace privé de l'application Android ;</li>
+        <li>VYDEL demande des autorisations Google limitées aux fonctions nécessaires et ne les utilise pas à d'autres fins.</li>
+      </ul>
+
+      <h2>6. Conservation et suppression des données utilisateur Google</h2>
+      <p>VYDEL conserve uniquement les données nécessaires aussi longtemps qu'elles sont utiles au fonctionnement demandé par l'utilisateur.</p>
+      <ul>
+        <li><strong>Jetons OAuth</strong> : les jetons d'accès sont temporaires et ne sont pas stockés de manière persistante par VYDEL.</li>
+        <li><strong>Informations du compte Google</strong> : l'email, le nom, l'identifiant du compte et éventuellement la photo de profil peuvent être stockés localement tant que le compte reste connecté à VYDEL. La déconnexion du compte efface l'état local du compte dans VYDEL et demande la révocation de l'accès OAuth Google.</li>
+        <li><strong>Adresses email de livraison</strong> : une adresse utilisée pour une livraison réussie peut être conservée localement avec l'historique de l'événement afin de permettre la gestion de la livraison et, à la demande de l'utilisateur, l'envoi d'un avertissement avant suppression. Elle est supprimée lorsque l'historique correspondant ou les données de l'application sont supprimés.</li>
+        <li><strong>Fichiers Google Drive</strong> : les vidéos et dossiers VYDEL présents sur Google Drive restent dans le compte Google de l'utilisateur jusqu'à ce qu'ils soient supprimés par l'utilisateur, via VYDEL lorsqu'une fonction de suppression est utilisée, ou directement depuis Google Drive.</li>
+      </ul>
+      <p>L'utilisateur peut également supprimer toutes les données locales de VYDEL en effaçant les données de l'application ou en désinstallant l'application. Les fichiers présents sur Google Drive restent sous le contrôle du compte Google de l'utilisateur et peuvent être supprimés depuis Google Drive.</p>
+
+      <h2>7. Gmail</h2>
+      <p>Lorsque l'utilisateur choisit explicitement d'envoyer un lien client par email, VYDEL utilise l'autorisation Gmail accordée pour envoyer ce message depuis le compte Google sélectionné.</p>
+      <p>VYDEL n'utilise pas Gmail pour lire, analyser ou télécharger les messages de l'utilisateur.</p>
+
+      <h2>8. Google Drive</h2>
+      <p>Lorsque Google Drive est activé, VYDEL peut envoyer les vidéos générées vers le Drive de l'utilisateur, créer des dossiers nécessaires à l'organisation des livraisons, générer des liens de partage et supprimer des fichiers VYDEL lorsque l'utilisateur le demande.</p>
+      <p>Les vidéos stockées sur Google Drive sont soumises aux conditions et politiques applicables au compte Google de l'utilisateur.</p>
+
+      <h2>9. Google API Services User Data Policy — Limited Use</h2>
+      <p>L'utilisation et le transfert par VYDEL des informations reçues des API Google respectent la <strong>Google API Services User Data Policy</strong>, y compris les exigences de <strong>Limited Use</strong>.</p>
+      <p>VYDEL utilise les données obtenues via Google APIs uniquement pour fournir ou améliorer les fonctionnalités destinées à l'utilisateur qui sont décrites dans cette politique. Ces données ne sont pas utilisées pour la publicité, le profilage publicitaire, la revente de données, ni pour entraîner des modèles d'IA/ML généralisés.</p>
+
+      <h2>10. Stockage local et contrôle de l'utilisateur</h2>
+      <p>Les préférences de session, les références de fichiers, les états de livraison et certaines informations de compte ou d'adresse email peuvent être stockés localement sur l'appareil afin d'assurer le fonctionnement et la gestion des événements.</p>
       <p>La page Stockage permet à l'utilisateur de supprimer manuellement, événement par événement, les rendus créés par VYDEL sur le téléphone et les fichiers VYDEL correspondants sur Google Drive. Cette fonction ne supprime pas les rushs originaux, les intros, les outros ni les musiques.</p>
-      <p>Les vidéos envoyées sur Google Drive sont stockées dans le compte Google de l'utilisateur conformément aux conditions et politiques de Google.</p>
-
-      <h2>Contrôle de l'utilisateur</h2>
       <p>L'utilisateur peut utiliser les fonctions locales de montage et de partage sans connecter Google. Il peut également déconnecter son compte Google depuis VYDEL.</p>
 
-      <h2>Modifications</h2>
-      <p>Cette politique pourra être mise à jour lorsque les fonctionnalités de VYDEL évolueront. La date de mise à jour figurant en haut de cette page indiquera la version la plus récente.</p>
+      <h2>11. Publicité et vente de données</h2>
+      <p>VYDEL ne vend pas les données personnelles de ses utilisateurs. La version actuelle de VYDEL n'intègre pas de publicité ni de SDK publicitaire.</p>
+
+      <h2>12. Modifications</h2>
+      <p>Cette politique pourra être mise à jour lorsque les fonctionnalités de VYDEL évolueront. La date de mise à jour figurant en haut de cette page indique la version la plus récente.</p>
     </section>
 
     <section id="english" class="legal-head english-head">
       <div class="eyebrow">VYDEL</div>
       <h1>Privacy Policy</h1>
-      <p>Last updated: September 28, 2026</p>
+      <p>Last updated: October 2, 2026</p>
     </section>
 
     <section class="legal-card">
-      <p>VYDEL is an Android application designed to help videographers prepare, edit and deliver event videos.</p>
+      <p>VYDEL is an Android application designed to help videographers prepare, edit, render and deliver event videos. Editing and rendering are performed locally on the Android device. Connecting Google is optional and is used only for the delivery features described below.</p>
 
-      <h2>Local video processing</h2>
-      <p>Videos imported into VYDEL are processed locally on the Android device for editing and rendering operations.</p>
+      <h2>1. Local video processing</h2>
+      <p>Videos imported into VYDEL are processed locally on the Android device for editing, reframing, slow-motion and rendering operations.</p>
+      <p>VYDEL does not upload original source clips to a VYDEL server. A rendered video is uploaded to Google Drive only when the user has connected Google and uses the corresponding synchronization or delivery feature.</p>
 
-      <h2>Google Drive</h2>
-      <p>Connecting a Google account is optional. When the user enables Google Drive, VYDEL uses the permission granted by the user to upload rendered videos to the user's Google Drive and create sharing links for those files.</p>
-      <p>VYDEL does not ask for or store the user's Google password. Authentication and access tokens are handled by Google's authorization components on the device.</p>
+      <h2>2. Google user data accessed by VYDEL</h2>
+      <p>When the user chooses to connect a Google account, VYDEL requests only the permissions required for the Google features offered by the application.</p>
+      <ul>
+        <li><strong>Account identity (openid, email, profile)</strong>: VYDEL may access the Google account email address, display name, profile picture and unique account identifier in order to identify the connected account inside the app and associate Drive files with the correct account.</li>
+        <li><strong>Google Drive (drive.file)</strong>: VYDEL uses this permission to create, upload, manage and, when requested by the user, delete Drive files and folders created or used by VYDEL for video delivery.</li>
+        <li><strong>Gmail (gmail.send)</strong>: VYDEL uses this permission only when the user explicitly requests that VYDEL send a delivery or warning email from the user's own Google account.</li>
+      </ul>
+      <p>VYDEL does not use Gmail to read the user's inbox, messages, attachments or contacts. VYDEL does not request general access to Drive files that are unrelated to the features described above.</p>
 
-      <h2>Gmail</h2>
-      <p>When the user explicitly chooses to email a client link, VYDEL may use the granted Gmail permission to send that message from the selected Google account.</p>
-      <p>An email address used for a successful delivery may be stored locally in the event history so that, at the user's request, VYDEL can later send a warning before Drive files are deleted. No warning or deletion is triggered automatically.</p>
-      <p>VYDEL does not use Gmail to read the user's messages.</p>
+      <h2>3. How VYDEL uses Google user data</h2>
+      <p>Data obtained through Google APIs is used exclusively to provide the visible, user-requested VYDEL features described below:</p>
+      <ul>
+        <li>identify and display which Google account is connected;</li>
+        <li>upload videos rendered by VYDEL to the user's Google Drive;</li>
+        <li>create and manage sharing links associated with VYDEL files;</li>
+        <li>send, only when requested by the user, emails containing delivery links or warnings related to the user's videos;</li>
+        <li>manage or delete Drive files created by VYDEL when the user requests that action.</li>
+      </ul>
+      <p>VYDEL does not use Google user data for advertising, advertising profiling, third-party marketing, data brokerage, or to train, develop or improve a generalized AI or machine learning model.</p>
 
-      <h2>Personal data</h2>
-      <p>VYDEL does not sell users' personal data.</p>
-      <p>The current version of VYDEL does not include advertising or advertising SDKs.</p>
+      <h2>4. Sharing, transfer and disclosure of Google user data</h2>
+      <p>VYDEL does not sell, rent or license Google user data to third parties.</p>
+      <p>VYDEL does not share Google user data with advertising networks, data brokers, social networks or marketing partners for their own purposes.</p>
+      <p>Google user data may be transmitted only when necessary to perform a feature requested by the user:</p>
+      <ul>
+        <li><strong>Google</strong>: requests to Google Drive, Gmail and OpenID Connect are sent to Google services in order to perform the actions authorized by the user.</li>
+        <li><strong>A recipient selected by the user</strong>: when the user requests that an email be sent, the selected recipient receives the message content and sharing link that the user chose to send.</li>
+      </ul>
+      <p>VYDEL does not transfer Google user data to third parties for an independent purpose unrelated to the user's request.</p>
 
-      <h2>Storage</h2>
-      <p>Session preferences, file references, delivery states and email addresses used for deliveries may be stored locally on the device to support event management.</p>
-      <p>The Storage page lets the user manually delete, event by event, renders created by VYDEL on the phone and the corresponding VYDEL files on Google Drive. This feature does not delete original clips, intros, outros or music.</p>
-      <p>Videos uploaded to Google Drive are stored in the user's Google account under Google's applicable terms and policies.</p>
+      <h2>5. Data protection and security measures</h2>
+      <p>VYDEL applies the following measures to limit exposure of sensitive data:</p>
+      <ul>
+        <li>VYDEL never asks for or stores the user's Google password;</li>
+        <li>Google OAuth access tokens are used to perform authorized actions and are not persistently stored in VYDEL preferences;</li>
+        <li>communications with Google services use HTTPS/TLS connections;</li>
+        <li>account and session information required by the app is stored locally in the Android application's private storage;</li>
+        <li>VYDEL requests Google permissions limited to the features it needs and does not use those permissions for unrelated purposes.</li>
+      </ul>
 
-      <h2>User control</h2>
+      <h2>6. Retention and deletion of Google user data</h2>
+      <p>VYDEL retains only the data required for the user-requested functionality and only for as long as it remains useful for that purpose.</p>
+      <ul>
+        <li><strong>OAuth tokens</strong>: access tokens are temporary and are not persistently stored by VYDEL.</li>
+        <li><strong>Google account information</strong>: the email address, name, account identifier and, where available, profile picture may be stored locally while the account remains connected to VYDEL. Disconnecting Google clears VYDEL's local account state and requests revocation of the Google OAuth access.</li>
+        <li><strong>Delivery email addresses</strong>: an address used for a successful delivery may be retained locally with the event history to support delivery management and, when requested by the user, a warning before deletion. It is deleted when the corresponding history or the application's data is deleted.</li>
+        <li><strong>Google Drive files</strong>: VYDEL videos and folders stored in Google Drive remain in the user's Google account until they are deleted by the user, through VYDEL when a deletion feature is used, or directly in Google Drive.</li>
+      </ul>
+      <p>The user can also remove all locally stored VYDEL data by clearing the app's data or uninstalling the application. Files stored in Google Drive remain under the user's Google account and can be deleted from Google Drive.</p>
+
+      <h2>7. Gmail</h2>
+      <p>When the user explicitly chooses to email a client link, VYDEL uses the granted Gmail permission to send that message from the selected Google account.</p>
+      <p>VYDEL does not use Gmail to read, analyze or download the user's messages.</p>
+
+      <h2>8. Google Drive</h2>
+      <p>When Google Drive is enabled, VYDEL may upload rendered videos to the user's Drive, create folders required to organize deliveries, generate sharing links and delete VYDEL files when the user requests it.</p>
+      <p>Videos stored in Google Drive remain subject to the terms and policies applicable to the user's Google account.</p>
+
+      <h2>9. Google API Services User Data Policy — Limited Use</h2>
+      <p>VYDEL's use and transfer of information received from Google APIs adheres to the <strong>Google API Services User Data Policy</strong>, including the <strong>Limited Use</strong> requirements.</p>
+      <p>VYDEL uses data obtained through Google APIs only to provide or improve user-facing features described in this policy. This data is not used for advertising, advertising profiling, data resale, or for training generalized AI/ML models.</p>
+
+      <h2>10. Local storage and user control</h2>
+      <p>Session preferences, file references, delivery states and certain account or delivery email information may be stored locally on the device to support application functionality and event management.</p>
+      <p>The Storage page lets the user manually delete, event by event, renders created by VYDEL on the phone and the corresponding VYDEL files on Google Drive. This feature does not delete original source clips, intros, outros or music.</p>
       <p>Users can use local editing and local sharing features without connecting Google. Users can also disconnect their Google account from VYDEL.</p>
 
-      <h2>Changes</h2>
-      <p>This policy may be updated as VYDEL evolves. The update date at the top of this page indicates the latest version.</p>
+      <h2>11. Advertising and sale of data</h2>
+      <p>VYDEL does not sell users' personal data. The current version of VYDEL does not include advertising or advertising SDKs.</p>
+
+      <h2>12. Changes</h2>
+      <p>This policy may be updated as VYDEL evolves. The update date shown at the top of this page indicates the latest version.</p>
     </section>
   </main>
 
