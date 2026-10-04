@@ -1,0 +1,30 @@
+name: ChatGPT Project Export
+on:
+  push:
+    branches: [ main ]
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Build export metadata
+        shell: bash
+        run: |
+          mkdir -p _project_export
+          git rev-parse HEAD > _project_export/HEAD.txt
+          git log --all --decorate --date=iso-strict --pretty=format:'%H%x09%ad%x09%an%x09%d%x09%s' > _project_export/git-history.tsv
+          git branch -a -vv > _project_export/branches.txt
+          git tag -n > _project_export/tags.txt
+          git status --short --branch > _project_export/status.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: vydel-site-full-repository-snapshot
+          path: |
+            .
+            !.git/**
+          include-hidden-files: true
+          if-no-files-found: error
